@@ -16,7 +16,7 @@ label {
     /* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
     display: inline-block;
     width: 90px;
-    text-align: right;
+    text-align: left;
 }
 
 input {
