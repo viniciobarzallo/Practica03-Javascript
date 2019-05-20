@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    var tela = document.getElementById("tela");
+    var pantalla = document.getElementById("pantalla");
 
     //Array de elementos que reciben un listener
     var listenerBtn = [];
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Adicionando evento del click
     for (var i = 0; i < listenerBtn.length; i++) {
-        listenerBtn[i].addEventListener("click", passarValorTela);
+        listenerBtn[i].addEventListener("click", passarValorpantalla);
     }
 
     btnResultado.onclick = function () {
@@ -41,14 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function verificarResulatado() {
         try {
-            var aux = tela.value.substring(tela.value.length - 1, tela.value.length);
+            var aux = pantalla.value.substring(pantalla.value.length - 1, pantalla.value.length);
             if (verificarOperador(aux)) {
-                apagarAnterior();
+                borrarAnterior();
             }
 
-            var valorCalculado = eval(tela.value); //calcular el contenido del string
+            var valorCalculado = eval(pantalla.value); //calcular el contenido del string
             if (valorCalculado || valorCalculado == "0") {
-                tela.value = valorCalculado;
+                pantalla.value = valorCalculado;
             } else {
                 throw "erro";
             }
@@ -57,17 +57,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function passarValorTela() {
+    function passarValorpantalla() {
 
         if (verificarOperador(this.value)) {
-            var aux = tela.value.substring(tela.value.length - 1, tela.value.length);
+            var aux = pantalla.value.substring(pantalla.value.length - 1, pantalla.value.length);
             //sustituir el valor del operador por el actual
             if (verificarOperador(aux)) {
                 borrarAnterior();
             }
         }
         if (this.value) {
-            tela.value += this.value;
+            pantalla.value += this.value;
         }
 
     }
@@ -78,14 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Funcion borrar caracteres de la pantalla
     function borrarAnterior() {
-        if (tela.value.length > 0) {
-            var aux = tela.value.substring(0, tela.value.length - 1);
-            tela.value = aux;
+        if (pantalla.value.length > 0) {
+            var aux = pantalla.value.substring(0, pantalla.value.length - 1);
+            pantalla.value = aux;
         }
     }
 
     btnLimpiarPantalla.onclick = function () {
-        tela.value = "";
+        pantalla.value = "";
     }
 
     //Funcion para verificar el operador
