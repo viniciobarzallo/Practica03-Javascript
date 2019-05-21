@@ -4,9 +4,19 @@ form {
     width: 400px;
     /* Para ver el borde del formulario */
     padding: 1em;
-    border: 1px solid #CCC;
+    border: 2px solid #CCC;
     border-radius: 1em;
 }
+
+form {
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 0 30px;
+    background-color: #B2DFDB;
+  }
+
+body {
+    background-color: rgb(237, 250, 166);
+  }
 
 form div + div {
     margin-top: 1em;
@@ -42,8 +52,29 @@ input:focus {
     /* Para posicionar los botones a la misma posición que los campos de texto */
     padding-left: 90px; /* mismo tamaño a todos los elementos label */
 }
+
 button {
     /* Este margen extra representa aproximadamente el mismo espacio que el espacio
        entre los labels y sus campos de texto */
     margin-left: .5em;
+}
+
+.note {
+    color: #586069;
+    font-size: 12px;
+    margin: 4px 0 2px;
+    min-height: 17px;
+}
+
+p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

@@ -7,55 +7,61 @@
         <meta name="keywords" content="HTML5, CSS, JavaScript, content, margin"/>
         <title>Formulario</title> 
         <link href="css/estilos.css" rel="stylesheet"/>
-        <script type="text/javascript" src="./js/script.js"></script>
     </head>
 
 
     <body>
 
-        <form action="/my-handling-form-page" method="post">
+        <form action="/my-handling-form-page" method="POST" id="formulario01" onsubmit="return validarCamposObligatorios()">
 
             <div>
                 <label for="cedula">Cédula:</label>
-                <input type="text" id="cedula" />
+                <input type="text" id="cedula" placeholder="Ingrese su Cédula" value="" onblur="validarcedu(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" placeholder="Ingrese su cédula"/>
+                <p id="mensajeCedula" class ="note"></p>
+
             </div>
 
             <div>
                 <label for="nombres">Nombres:</label>
-                <input type="text" id="nombres" />
+                <input type="text" id="nombres" placeholder="Ingrese sus Nombres" value="" onkeypress="return soloLetras(event);"/>
+                <p id="mensajeNombre" class ="note"></p>
+                
             </div>
 
             <div>
                 <label for="apellidos">Apellidos:</label>
-                <input type="text" id="apellidos" />
+                <input type="text" id="apellidos" placeholder="Ingrese sus Apellidos" value="" onkeypress="return soloLetras(event);"/>
+                <p id="mensajeApellido" class ="note"></p>
             </div>
                           
             <div>
                 <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" />
+                <input type="text" id="direccion" placeholder="Ingrese su Dirección"/>
             </div>
 
             <div>
                 <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" />
+                <input type="text" id="telefono" placeholder="Ingrese su Teléfono"/>
             </div>
 
             <div>
                 <label for="fechaNacimiento">Nacimiento:</label>
-                <input type="text" id="fechaNacimiento" />
+                <input type="text" id="fechaNacimiento" placeholder="Ingrese su Fecha de Nacimiento"/>
             </div>
 
             <div>
-                <label for="mail">E-mail:</label>
-                <input type="email" id="mail" />
+                <label for="correo">Correo:</label>
+                <input type="correo" id="correo" placeholder="Ingrese su Correo"/>
             </div>
 
             <div class="button">
                     <button type="submit">Envia tu mensaje</button>
             </div>
+
         </form>
 
-</body>
+        <script type="text/javascript" src="./js/script.js"></script>
 
+    </body>
 
 </html>

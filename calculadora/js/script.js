@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
     listenerBtn.push(document.getElementById("num8"));
     listenerBtn.push(document.getElementById("num9"));
 
+    function raizCuadrada() {
+
+        var respuesta = Number(document.getElementById("resultado").value);   
+        var res= Math.sqrt(respuesta);
+        document.getElementById("resultado").value=res;
+   }
+
+
     //Adicionando evento del click
     for (var i = 0; i < listenerBtn.length; i++) {
         listenerBtn[i].addEventListener("click", passarValorpantalla);
@@ -99,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return true;
             case "/":
                 return true;
-
+            
             default:
                 return false;
         }
