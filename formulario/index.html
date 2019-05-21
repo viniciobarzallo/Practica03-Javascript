@@ -2,56 +2,59 @@
 <html lang="es"> 
 
     <head>
-
         <meta charset="utf-8"/> 
+        <title>Formulario</title>
         <meta name="keywords" content="HTML5, CSS, JavaScript, content, margin"/>
-        <title>Formulario</title> 
         <link href="css/estilos.css" rel="stylesheet"/>
     </head>
 
 
     <body>
+        <form action="/my-handling-form-page" onsubmit="return validarCamposObligatorios()">
 
-        <form action="/my-handling-form-page" method="POST" id="formulario01" onsubmit="return validarCamposObligatorios()">
-
+            <h2>Formulario</h2>
             <div>
                 <label for="cedula">Cédula:</label>
-                <input type="text" id="cedula" placeholder="Ingrese su Cédula" value="" onblur="validarcedu(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" placeholder="Ingrese su cédula"/>
+                <input type="text" id="cedula" placeholder="0101010XXX" value="" onblur="validarcedu(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" placeholder="Ingrese su cédula"/>
                 <p id="mensajeCedula" class ="note"></p>
 
             </div>
 
             <div>
                 <label for="nombres">Nombres:</label>
-                <input type="text" id="nombres" placeholder="Ingrese sus Nombres" value="" onkeypress="return soloLetras(event);"/>
+                <input type="text" id="nombres" placeholder="Juan" value="" onkeypress="return soloLetras(event);"/>
                 <p id="mensajeNombre" class ="note"></p>
                 
             </div>
 
             <div>
                 <label for="apellidos">Apellidos:</label>
-                <input type="text" id="apellidos" placeholder="Ingrese sus Apellidos" value="" onkeypress="return soloLetras(event);"/>
+                <input type="text" id="apellidos" placeholder="Perez" value="" onkeypress="return soloLetras(event);"/>
                 <p id="mensajeApellido" class ="note"></p>
             </div>
                           
             <div>
                 <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" placeholder="Ingrese su Dirección"/>
+                <input type="text" id="direccion" placeholder="Calle Pepito" value=""/>
+                <p id="mensajeDireccion" class ="note"></p>
             </div>
 
             <div>
                 <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" placeholder="Ingrese su Teléfono"/>
+                <input type="text" id="telefono" placeholder="0990254XXX" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <p id="mensajeTelefono" class ="note"></p>
             </div>
 
             <div>
                 <label for="fechaNacimiento">Nacimiento:</label>
-                <input type="text" id="fechaNacimiento" placeholder="Ingrese su Fecha de Nacimiento"/>
+                <input type="text" id="fechaNacimiento" placeholder="dd/mm/yyyy" onblur =" validarFecha(this)"/>
+                <p id="mensajeFecha" class ="note"></p>
             </div>
 
             <div>
                 <label for="correo">Correo:</label>
-                <input type="correo" id="correo" placeholder="Ingrese su Correo"/>
+                <input type="correo" id="correo" placeholder="jperez123@est.ups.edu.ec/ups.edu.ec" value="" oninput="validarCorreo(this)"/>
+                <p id="mensajeCorreo" class ="note"></p>
             </div>
 
             <div class="button">

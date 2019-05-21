@@ -1,5 +1,5 @@
 # JavaScript
-Despues de seguir una estructura correcto con cada una de las etiquetas nuestra pagina realizada en HTML5 nos queda un buen resultado.
+Despues de seguir una estructura correcto con cada una de las etiquetas nuestra pagina realizada en HTML5, CSS, JavaScript nos queda un buen resultado.
 
 
 <h1>Objectivo</h1>

@@ -8,6 +8,11 @@ form {
     border-radius: 1em;
 }
 
+h2{
+    margin-top: 0.01em;
+    text-align: center
+}
+
 form {
     font-family: 'Roboto', sans-serif;
     padding: 15px 0 30px;
@@ -33,6 +38,7 @@ input {
     /* Para asegurarse de que todos los campos de texto tienen las mismas propiedades de fuente
        Por defecto, las areas de texto tienen una fuente con monospace */
     font: 1em sans-serif;
+    font-size: 15px;
 
     /* Para darle el mismo tamaño a todos los campos de texto */
     width: 300px;
@@ -57,6 +63,7 @@ button {
     /* Este margen extra representa aproximadamente el mismo espacio que el espacio
        entre los labels y sus campos de texto */
     margin-left: .5em;
+    font-size: 15px;
 }
 
 .note {
